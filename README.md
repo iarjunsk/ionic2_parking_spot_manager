@@ -16,6 +16,6 @@ $ cd ionic2_parking_spot_manager
 $ npm install 
 $ ionic serve
 ```
-### DEMO
+### Demo
 ![ Parking Spot](/demo.gif)
 
