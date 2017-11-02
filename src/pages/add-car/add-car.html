@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Car</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label fixed>Slot</ion-label>
+        <ion-input type="text" [(ngModel)]="slot" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label fixed>Registration</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="registration" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Color</ion-label>
+      <ion-select [(ngModel)]="color" >
+        <ion-option value="primary">Blue</ion-option>
+        <ion-option value="dark">Black</ion-option>
+        <ion-option value="danger">Red</ion-option>
+        <ion-option value="secondary">Green</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <div padding>
+        <button ion-button color="secondary" block (click)="addCarToTable()" > Add Car </button>
+    </div>
+    
+
+</ion-content>

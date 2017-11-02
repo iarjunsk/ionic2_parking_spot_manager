@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>View Cars</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+  <ion-item>
+    <ion-label>Color</ion-label>
+    <ion-select [(ngModel)]="color"  (ionChange)="applyColorFilter()" >
+      <ion-option value="nil">All</ion-option>
+      <ion-option value="primary">Blue</ion-option>
+      <ion-option value="dark">Black</ion-option>
+      <ion-option value="danger">Red</ion-option>
+      <ion-option value="secondary">Green</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-icon name="car" item-start color="{{ item.getColor() }}" ></ion-icon>
+      {{ item.getRegistration() }}
+      <ion-badge item-end> {{ item.getSlotNo() }}</ion-badge>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

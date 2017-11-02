@@ -3,19 +3,26 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ItemDetailsPage } from '../pages/item-details/item-details';
-import { ListPage } from '../pages/list/list';
+/* Services ie Providers : Declaring in the root so that, data is preserved in all the pages */
+import {TableService} from '../providers/table.service'
+import {CommonService} from '../providers/common.service'
+
+// All the app pages
+import { GenerateDataPage } from '../pages/generate-data/generate-data';
+import { ManipulateDataPage } from '../pages/manipulate-data/manipulate-data';
+import { ViewDataPage } from '../pages/view-data/view-data';
+import { AddCarPage } from '../pages/add-car/add-car';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage
+    MyApp, // Add page details
+    GenerateDataPage,
+    ManipulateDataPage,
+    ViewDataPage,
+    AddCarPage
   ],
   imports: [
     BrowserModule,
@@ -23,15 +30,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage
+    MyApp,// Add page details
+    GenerateDataPage,
+    ManipulateDataPage,
+    ViewDataPage,
+    AddCarPage
   ],
-  providers: [
+  providers: [ // Add service details
+    TableService,
+    CommonService,
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+
   ]
 })
 export class AppModule {}
