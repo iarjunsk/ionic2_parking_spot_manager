@@ -1,26 +1,22 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+## Parking Spot Manager
 
-## How to use this template
+### Problem statement :
+A parking space provider needs an app to track the cars parked. The parking spots are given on the first come first basis, ie nearest spot will be given to the first car and second nearest to second car and so on. If any parking spot gets vacated, say for eg:- parking-spot-3 gets vacated, the next comming car is eligible to occupy that position.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+### Impelemtation
+1. Used heap to find the nearest parking spot for a car.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+2. Randomly generates data.
 
-### With the Ionic CLI:
+3. Search, Filter etc.
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTutorial tutorial
-```
-
-Then, to run it, cd into `myTutorial` and run:
+### Instructions
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ cd ionic2_parking_spot_manager
+$ npm install 
+$ ionic serve
 ```
-
-Substitute ios for android if not on a Mac.
+### DEMO
+![ Parking Spot](/demo.gif)
 
