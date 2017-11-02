@@ -5,9 +5,7 @@ A parking space provider needs an app to track the cars parked. The parking spot
 
 ### Impelemtation
 1. Used heap to find the nearest parking spot for a car.
-
 2. Randomly generates data.
-
 3. Search, Filter etc.
 
 ### Instructions
